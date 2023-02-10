@@ -5,7 +5,11 @@ Python Projects is a coding archive for the code I developed in my free time fee
 
 Requirements
 ------------
-I used Conda when devloping the code within this repositrie
+When running any of the code make sure to install all the libraries required by typing the following into your terminal:
+
+pip install -r requirements.txt
+
+If this doesn't work check you have pip installed and if not install pip then try again.
 
 License
 -------
