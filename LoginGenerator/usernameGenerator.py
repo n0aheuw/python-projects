@@ -15,6 +15,7 @@ userstr = tkinter.StringVar()
 # function to copy the password to the clipboard
 def copytoclipboard():
     random_user = userstr.get()
+    random_user = random_user.replace("'", "").replace(")", "").replace("(", "").replace(",", "")
     pyperclip.copy(random_user)
 
 # creating title widget
