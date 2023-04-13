@@ -5,10 +5,6 @@ from decimal import *
 getcontext().rounding = ROUND_FLOOR
 sys.setrecursionlimit(100000)
 
-python2 = sys.version_info[0] == 2
-if python2:
-	input = raw_input
-
 # Store previously computed factorials
 factorials = {0: 1, 1: 1}
 
@@ -19,7 +15,7 @@ def factorial(n):
     factorials[n] = result
     return result
 
-def getIteratedValue(k):
+def get_iteration(k):
     k = k + 1
     getcontext().prec = k
     sum = 0
@@ -29,10 +25,10 @@ def getIteratedValue(k):
         sum += first/down 
     return Decimal(sum) 
 
-def getValueOfPi(k):
-    iter = getIteratedValue(k)
+def get_value__pi(k):
+    iteration = get_iteration(k)
     up = 426880*math.sqrt(10005)
-    pi = Decimal(up) / iter 
+    pi = Decimal(up) / iteration 
     return pi
 
 def shell():
@@ -45,7 +41,7 @@ def shell():
         if not entry.isdigit():
             print ("You did not enter a number. Try again")
         else:
-            print (getValueOfPi(int(entry)))
+            print (get_value__pi(int(entry)))
 
 if __name__=='__main__':
     shell()
