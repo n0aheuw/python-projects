@@ -173,4 +173,9 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
+#ignore visual studio code
 .vs/
+
+#ignore configuration files
+bots/reddit_bot/config.py
+bots/reddit_bot/replied_comments.txt
